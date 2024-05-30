@@ -1,0 +1,12 @@
+/home/u07khl00/work/picInputs/myLWFA/bin/cuda_memtest
+/home/u07khl00/work/picInputs/myLWFA/bin/mpiInfo
+/home/u07khl00/work/picInputs/myLWFA/bin/picongpu
+/home/u07khl00/work/picInputs/myLWFA/bin/pic-create
+/home/u07khl00/work/picInputs/myLWFA/bin/pic-configure
+/home/u07khl00/work/picInputs/myLWFA/bin/pic-build
+/home/u07khl00/work/picInputs/myLWFA/bin/egetopt
+/home/u07khl00/work/picInputs/myLWFA/bin/pic-compile
+/home/u07khl00/work/picInputs/myLWFA/bin/tbg
+/home/u07khl00/work/picInputs/myLWFA/bin/pic-edit
+/home/u07khl00/work/picInputs/myLWFA/bin/cuda_memtest.sh
+/home/u07khl00/work/picInputs/myLWFA/bin/picongpu-completion.bash

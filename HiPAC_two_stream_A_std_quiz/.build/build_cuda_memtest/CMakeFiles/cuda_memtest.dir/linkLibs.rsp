@@ -1,0 +1,1 @@
+ -Wl,-rpath,::::::: "/usr/lib/x86_64-linux-gnu/libnvidia-ml.so" -lcudadevrt -lcudart_static -lrt -lpthread -ldl 
