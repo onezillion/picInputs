@@ -181,73 +181,75 @@ class ImagetoAnime:
         print(self.output_anime + ".avi")
 
 
-if True:
-	simDir = "~/work/runs/hipac_case_C_0.5_new"
-	# plot energy - time
-	data_folder = os.path.expanduser( simDir + "/simOutput/")
-	energy_plot = EnergyPlot(data_folder)
-	energy_plot.plot_energy()
-	
-	# plot phase space
-	data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/")
-	hdf5_plot = HDF5Plot(data_folder)
-	hdf5_plot.plot_phase_space( yrange=[-2.5,2.5] )
-	exit()
 
 
 
 
-simDir = "~/work/runs/hipac_case_B_0.1_ill_case"
+simDir = "~/work/runs/HiPAC_two_stream_C_01/"
 
-data_folder = os.path.expanduser( simDir + "/simOutput/pngElectronsYX/")
-transpose1 = ImagetoAnime( data_folder , "png", "PrtField_anime" )
-transpose1.transpose_images()
-#exit()
+mplot0=[0,7]
 
 
-# plot energy - time
-data_folder = os.path.expanduser( simDir + "/simOutput/")
-energy_plot = EnergyPlot(data_folder)
-energy_plot.plot_energy()
-
-
-# plot dispersion diagrams
-data_folder = os.path.expanduser( simDir + "/simOutput/openPMD/")
-hdf5_plot = HDF5Plot(data_folder)
-hdf5_plot.plot_ex_fft( wmax=16 , kmax=0.15 , nt_init=500 )
-#hdf5_plot.plot_ex_fft( wmax=4 , kmax=0.2 , nt_init=50 )
-
-#exit()
-
-# create gif for field plots
-data_folder = os.path.expanduser( simDir + "/simOutput/pngElectronsYX/tp_img/")
-converter = ImagetoAnime( data_folder , "png", "PrtField_anime" )
-converter.convert_to_gif()
-
-# create video for field plots
-data_folder = os.path.expanduser( simDir + "/simOutput/pngElectronsYX/tp_img/")
-converter = ImagetoAnime( data_folder , "png", "PrtField_anime" )
-converter.generate_video()
-
-#exit()
-
-# plot phase space
-data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/")
-hdf5_plot = HDF5Plot(data_folder)
-hdf5_plot.plot_phase_space( yrange=[-0.5,2.5] )
-#hdf5_plot.plot_phase_space( yrange=[-0.5,0.5] )
-
-
-# create gif for phase space plots
-data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/fig_output/")
-converter = ImagetoAnime( data_folder , "jpg", "PhaseSpace" )
-converter.convert_to_gif()
-
-# create video for phase space plots
-data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/fig_output/")
-converter = ImagetoAnime( data_folder , "jpg", "PhaseSpace" )
-converter.generate_video()
-
+for mplot in mplot0:
+	if mplot==0:
+		# plot energy - time, for all cases
+		data_folder = os.path.expanduser( simDir + "/simOutput/")
+		energy_plot = EnergyPlot(data_folder)
+		energy_plot.plot_energy()
+		
+	elif mplot==1:
+		# transpose png figure, for Cases A & B
+		data_folder = os.path.expanduser( simDir + "/simOutput/pngElectronsYX/")
+		transpose1 = ImagetoAnime( data_folder , "png", "PrtField_anime" )
+		transpose1.transpose_images()
+		
+	elif mplot==2:
+		# plot dispersion diagrams, high temporal resolution, for Case A 
+		data_folder = os.path.expanduser( simDir + "/simOutput/openPMD/")
+		hdf5_plot = HDF5Plot(data_folder)
+		hdf5_plot.plot_ex_fft( wmax=16 , kmax=0.15 , nt_init=500 )
+		
+	elif mplot==3:
+		# plot dispersion diagrams, low temporal resolution, for Case B
+		data_folder = os.path.expanduser( simDir + "/simOutput/openPMD/")
+		hdf5_plot = HDF5Plot(data_folder)
+		hdf5_plot.plot_ex_fft( wmax=4 , kmax=0.2 , nt_init=50 )
+		
+	elif mplot==4:
+		# create gif for field plots, for Cases A & B
+		data_folder = os.path.expanduser( simDir + "/simOutput/pngElectronsYX/tp_img/")
+		converter = ImagetoAnime( data_folder , "png", "PrtField_anime" )
+		converter.convert_to_gif()
+		
+	elif mplot==5:
+		# create video for field plots, for Cases A & B
+		data_folder = os.path.expanduser( simDir + "/simOutput/pngElectronsYX/tp_img/")
+		converter = ImagetoAnime( data_folder , "png", "PrtField_anime" )
+		converter.generate_video()
+		
+	elif mplot==6:
+		# plot phase space, for Cases A & B
+		data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/")
+		hdf5_plot = HDF5Plot(data_folder)
+		hdf5_plot.plot_phase_space( yrange=[-0.5,2.5] )
+		
+	elif mplot==7:
+		# plot phase space, for Case C
+		data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/")
+		hdf5_plot = HDF5Plot(data_folder)
+		hdf5_plot.plot_phase_space( yrange=[-2.0,2.0] )
+		
+	elif mplot==8:
+		# create gif for phase space plots, for Cases A & B
+		data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/fig_output/")
+		converter = ImagetoAnime( data_folder , "jpg", "PhaseSpace" )
+		converter.convert_to_gif()
+		
+	elif mplot==9:
+		# create video for phase space plots, for Cases A & B
+		data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/fig_output/")
+		converter = ImagetoAnime( data_folder , "jpg", "PhaseSpace" )
+		converter.generate_video()
 
 exit()
 

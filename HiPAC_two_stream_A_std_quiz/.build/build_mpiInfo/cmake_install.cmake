@@ -47,15 +47,15 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/mpiInfo")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/mpiInfo"
-         RPATH "\$ORIGIN:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/boost-1.83.0-e4yvxdj6nsl62qg2fechu3cfgspgktj3/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-byplx62t4awwqwpl6nyiq6g43gxubw54/lib")
+         RPATH "\$ORIGIN:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/boost-1.85.0-xr2g2nyjhknljhirmqykihrezxvqnr3j/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib")
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/build_mpiInfo/mpiInfo")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/mpiInfo" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/mpiInfo")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/mpiInfo"
-         OLD_RPATH "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/boost-1.83.0-e4yvxdj6nsl62qg2fechu3cfgspgktj3/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-byplx62t4awwqwpl6nyiq6g43gxubw54/lib::::::::"
-         NEW_RPATH "\$ORIGIN:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/boost-1.83.0-e4yvxdj6nsl62qg2fechu3cfgspgktj3/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-byplx62t4awwqwpl6nyiq6g43gxubw54/lib")
+         OLD_RPATH "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/boost-1.85.0-xr2g2nyjhknljhirmqykihrezxvqnr3j/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib::::::::"
+         NEW_RPATH "\$ORIGIN:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/boost-1.85.0-xr2g2nyjhknljhirmqykihrezxvqnr3j/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/mpiInfo")
     endif()

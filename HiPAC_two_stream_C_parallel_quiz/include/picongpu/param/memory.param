@@ -48,7 +48,7 @@ namespace picongpu
      *
      * volume of a superCell must be <= 1024
      */
-    using SuperCellSize = typename mCT::shrinkTo<mCT::Int<4, 4, 1>, simDim>::type;
+    using SuperCellSize = typename mCT::shrinkTo<mCT::Int<8, 8, 1>, simDim>::type;
 
     /** number of slots for particles within a frame */
     static constexpr uint32_t numFrameSlots = pmacc::math::CT::volume<SuperCellSize>::type::value;
@@ -82,11 +82,11 @@ namespace picongpu
     struct DefaultExchangeMemCfg
     {
         // Memory used for a direction for a simulation performed with 32bit precision.
-        static constexpr uint32_t BYTES_EXCHANGE_X = 1 * 1024 * 1024; // 1 MiB
-        static constexpr uint32_t BYTES_EXCHANGE_Y = 1 * 1024 * 1024; // 1 MiB
-        static constexpr uint32_t BYTES_EXCHANGE_Z = 1 * 1024 * 1024; // 1 MiB
-        static constexpr uint32_t BYTES_EDGES = 64 * 1024; // 64 kiB
-        static constexpr uint32_t BYTES_CORNER = 16 * 1024; // 16 kiB
+        static constexpr uint32_t BYTES_EXCHANGE_X = 3 * 1024 * 1024; // 1 MiB
+        static constexpr uint32_t BYTES_EXCHANGE_Y = 6 * 1024 * 1024; // 1 MiB
+        static constexpr uint32_t BYTES_EXCHANGE_Z = 3 * 1024 * 1024; // 1 MiB
+        static constexpr uint32_t BYTES_EDGES = 128 * 1024; // 64 kiB
+        static constexpr uint32_t BYTES_CORNER = 32 * 1024; // 16 kiB
 
         /** Reference local domain size
          *
@@ -95,7 +95,7 @@ namespace picongpu
          * reference size. The exchange size will be scaled only up and not down. Zero means that there is no reference
          * domain size, exchanges will not be scaled.
          */
-        using REF_LOCAL_DOM_SIZE = mCT::Int<8, 0, 0>;
+        using REF_LOCAL_DOM_SIZE = mCT::Int<4, 4, 0>;
         /** Scaling rate per direction.
          *
          * 1.0 means it scales linear with the ratio between the local domain size at runtime and the reference local
