@@ -322,7 +322,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 CUDAMEMTEST_ENABLE:BOOL=ON
 
 //Path to a file.
-CUDAToolkit_CUPTI_INCLUDE_DIR:PATH=/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cuda-12.4.1-4hvvlxl3swf655j75m7unxinpq6ynlz2/targets/x86_64-linux/include/../../../extras/CUPTI/include
+CUDAToolkit_CUPTI_INCLUDE_DIR:PATH=/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cuda-12.4.1-4hvvlxl3swf655j75m7unxinpq6ynlz2/extras/CUPTI/include
 
 //Path to a library.
 CUDAToolkit_rt_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a

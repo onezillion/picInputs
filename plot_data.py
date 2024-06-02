@@ -237,7 +237,7 @@ for mplot in mplot0:
 		# plot phase space, for Case C
 		data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/")
 		hdf5_plot = HDF5Plot(data_folder)
-		hdf5_plot.plot_phase_space( yrange=[-2.0,2.0] )
+		hdf5_plot.plot_phase_space( yrange=[-1.0,1.0] )
 		
 	elif mplot==8:
 		# create gif for phase space plots, for Cases A & B

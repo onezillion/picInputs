@@ -6,5 +6,5 @@ CUDA_DEFINES = -DENABLE_NVML=1 -DNDEBUG
 
 CUDA_INCLUDES = --options-file CMakeFiles/cuda_memtest.dir/includes_CUDA.rsp
 
-CUDA_FLAGS = -g -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -Xcompiler=-g
+CUDA_FLAGS = -O3 -DNDEBUG -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]"
 
