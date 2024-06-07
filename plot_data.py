@@ -123,7 +123,7 @@ class HDF5Plot:
 
             plt.figure()
             plt.imshow(np.log(abs(d1)), extent=[0, 1, yrange[0], yrange[1]], interpolation='bilinear', aspect=1/np.diff(yrange), origin='lower', cmap='jet')
-            plt.ylabel('vx (me * c)', fontsize=12,fontweight='bold')
+            plt.ylabel('ux (me * c)', fontsize=12,fontweight='bold')
             plt.xlabel('x', fontsize=12,fontweight='bold')
             plt.title('time step = ' + t1, fontsize=12,fontweight='bold')
             
@@ -168,11 +168,11 @@ class ImagetoAnime:
             first_image.save(self.output_anime + ".gif", save_all=True, append_images=images[1:], duration=200, loop=0, optimize=True)
         print(self.output_anime + ".gif")
 
-    def generate_video(self):
+    def generate_video(self,fps=5):
         print("Generating video...")
         frame = cv2.imread(self.image_paths[0])
         height, width, layers = frame.shape
-        video = cv2.VideoWriter(self.output_anime + ".avi", cv2.VideoWriter_fourcc(*'DIVX'), 5, (width, height), isColor=True)
+        video = cv2.VideoWriter(self.output_anime + ".avi", cv2.VideoWriter_fourcc(*'DIVX'), fps, (width, height), isColor=True)
 
         for image_path in self.image_paths:
             video.write(cv2.imread(image_path))
@@ -188,8 +188,11 @@ class ImagetoAnime:
 #simDir = "~/work/runs/HiPAC_two_stream_C_16/"
 #mplot0=[0,7]
 
-simDir = "~/work/runs/HiPAC_two_stream_A_08/"
-mplot0=[0,1,2,5,6,9]
+#simDir = "~/work/runs/HiPAC_two_stream_A_08/"
+#mplot0=[0,1,2,5,6,9]
+
+simDir = "~/work/runs/HiPAC_two_stream_D_08/"
+mplot0=[0,7,9]
 
 
 for mplot in mplot0:
@@ -251,7 +254,8 @@ for mplot in mplot0:
 		# create video for phase space plots, for Cases A & B
 		data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/fig_output/")
 		converter = ImagetoAnime( data_folder , "jpg", "PhaseSpace" )
-		converter.generate_video()
+		converter.generate_video(fps=12)
 
 exit()
+
 
