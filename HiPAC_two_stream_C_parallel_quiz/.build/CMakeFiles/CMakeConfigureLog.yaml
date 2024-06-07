@@ -3430,3 +3430,225 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/home/u07khl00/src/picongpu/include/pmacc/PMaccConfig.cmake:287 (find_package)"
+      - "CMakeLists.txt:151 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-GYZNJO"
+      binary: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-GYZNJO"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/alpaka;/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/cmake-modules/"
+      CMAKE_WARN_DEPRECATED: "FALSE"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-GYZNJO'
+        
+        Run Build Command(s): /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E env VERBOSE=1 /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake -f Makefile cmTC_949dd/fast
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake  -f CMakeFiles/cmTC_949dd.dir/build.make CMakeFiles/cmTC_949dd.dir/build
+        gmake[1]: Entering directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-GYZNJO'
+        Building C object CMakeFiles/cmTC_949dd.dir/test_mpi.c.o
+        /usr/bin/gcc-12  -isystem /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/include  -o CMakeFiles/cmTC_949dd.dir/test_mpi.c.o -c /home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-GYZNJO/test_mpi.c
+        Linking C executable cmTC_949dd
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E cmake_link_script CMakeFiles/cmTC_949dd.dir/link.txt --verbose=1
+        /usr/bin/gcc-12 -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib CMakeFiles/cmTC_949dd.dir/test_mpi.c.o -o cmTC_949dd  -Wl,-rpath,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib/libmpi.so
+        gmake[1]: Leaving directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-GYZNJO'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/home/u07khl00/src/picongpu/include/pmacc/PMaccConfig.cmake:287 (find_package)"
+      - "CMakeLists.txt:151 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-2LMMen"
+      binary: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-2LMMen"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/alpaka;/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/cmake-modules/"
+      CMAKE_WARN_DEPRECATED: "FALSE"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-2LMMen'
+        
+        Run Build Command(s): /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E env VERBOSE=1 /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake -f Makefile cmTC_e95de/fast
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake  -f CMakeFiles/cmTC_e95de.dir/build.make CMakeFiles/cmTC_e95de.dir/build
+        gmake[1]: Entering directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-2LMMen'
+        Building CXX object CMakeFiles/cmTC_e95de.dir/test_mpi.cpp.o
+        /usr/bin/g++-12  -isystem /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/include -std=c++17 -o CMakeFiles/cmTC_e95de.dir/test_mpi.cpp.o -c /home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-2LMMen/test_mpi.cpp
+        Linking CXX executable cmTC_e95de
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e95de.dir/link.txt --verbose=1
+        /usr/bin/g++-12 -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib CMakeFiles/cmTC_e95de.dir/test_mpi.cpp.o -o cmTC_e95de  -Wl,-rpath,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib/libmpi.so
+        gmake[1]: Leaving directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-2LMMen'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "/home/u07khl00/src/picongpu/include/pmacc/PMaccConfig.cmake:287 (find_package)"
+      - "CMakeLists.txt:151 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-5NfHMV"
+      binary: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-5NfHMV"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/alpaka;/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/cmake-modules/"
+      CMAKE_WARN_DEPRECATED: "FALSE"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-5NfHMV'
+        
+        Run Build Command(s): /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E env VERBOSE=1 /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake -f Makefile cmTC_e5a7e/fast
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake  -f CMakeFiles/cmTC_e5a7e.dir/build.make CMakeFiles/cmTC_e5a7e.dir/build
+        gmake[1]: Entering directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-5NfHMV'
+        Building CXX object CMakeFiles/cmTC_e5a7e.dir/test_mpi.cpp.o
+        /usr/bin/g++-12  -isystem /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/include -std=c++17 -o CMakeFiles/cmTC_e5a7e.dir/test_mpi.cpp.o -c /home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-5NfHMV/test_mpi.cpp
+        Linking CXX executable cmTC_e5a7e
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5a7e.dir/link.txt --verbose=1
+        /usr/bin/g++-12 -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib CMakeFiles/cmTC_e5a7e.dir/test_mpi.cpp.o -o cmTC_e5a7e  -Wl,-rpath,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib/libmpi.so
+        gmake[1]: Leaving directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-5NfHMV'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/home/u07khl00/src/picongpu/include/pmacc/PMaccConfig.cmake:287 (find_package)"
+      - "CMakeLists.txt:151 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-j1y2qD"
+      binary: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-j1y2qD"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/alpaka;/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/cmake-modules/"
+      CMAKE_WARN_DEPRECATED: "FALSE"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-j1y2qD'
+        
+        Run Build Command(s): /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E env VERBOSE=1 /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake -f Makefile cmTC_a43e6/fast
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake  -f CMakeFiles/cmTC_a43e6.dir/build.make CMakeFiles/cmTC_a43e6.dir/build
+        gmake[1]: Entering directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-j1y2qD'
+        Building C object CMakeFiles/cmTC_a43e6.dir/test_mpi.c.o
+        /usr/bin/gcc-12  -isystem /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/include  -o CMakeFiles/cmTC_a43e6.dir/test_mpi.c.o -c /home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-j1y2qD/test_mpi.c
+        Linking C executable cmTC_a43e6
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a43e6.dir/link.txt --verbose=1
+        /usr/bin/gcc-12 -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib CMakeFiles/cmTC_a43e6.dir/test_mpi.c.o -o cmTC_a43e6  -Wl,-rpath,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib/libmpi.so
+        gmake[1]: Leaving directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-j1y2qD'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/home/u07khl00/src/picongpu/include/pmacc/PMaccConfig.cmake:287 (find_package)"
+      - "CMakeLists.txt:151 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-zHrF4b"
+      binary: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-zHrF4b"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/alpaka;/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/cmake-modules/"
+      CMAKE_WARN_DEPRECATED: "FALSE"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-zHrF4b'
+        
+        Run Build Command(s): /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E env VERBOSE=1 /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake -f Makefile cmTC_62618/fast
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake  -f CMakeFiles/cmTC_62618.dir/build.make CMakeFiles/cmTC_62618.dir/build
+        gmake[1]: Entering directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-zHrF4b'
+        Building CXX object CMakeFiles/cmTC_62618.dir/test_mpi.cpp.o
+        /usr/bin/g++-12  -isystem /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/include -std=c++17 -o CMakeFiles/cmTC_62618.dir/test_mpi.cpp.o -c /home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-zHrF4b/test_mpi.cpp
+        Linking CXX executable cmTC_62618
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62618.dir/link.txt --verbose=1
+        /usr/bin/g++-12 -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib CMakeFiles/cmTC_62618.dir/test_mpi.cpp.o -o cmTC_62618  -Wl,-rpath,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib/libmpi.so
+        gmake[1]: Leaving directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-zHrF4b'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/share/cmake-3.29/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "/home/u07khl00/src/picongpu/include/pmacc/PMaccConfig.cmake:287 (find_package)"
+      - "CMakeLists.txt:151 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-OGRrXO"
+      binary: "/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-OGRrXO"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/alpaka;/home/u07khl00/src/picongpu/include/pmacc/../../thirdParty/cmake-modules/"
+      CMAKE_WARN_DEPRECATED: "FALSE"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-OGRrXO'
+        
+        Run Build Command(s): /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E env VERBOSE=1 /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake -f Makefile cmTC_82202/fast
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/gmake-4.4.1-hfzkp7svyrgv7phrahj7q7yuj6dzvhx7/bin/gmake  -f CMakeFiles/cmTC_82202.dir/build.make CMakeFiles/cmTC_82202.dir/build
+        gmake[1]: Entering directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-OGRrXO'
+        Building CXX object CMakeFiles/cmTC_82202.dir/test_mpi.cpp.o
+        /usr/bin/g++-12  -isystem /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/include -std=c++17 -o CMakeFiles/cmTC_82202.dir/test_mpi.cpp.o -c /home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-OGRrXO/test_mpi.cpp
+        Linking CXX executable cmTC_82202
+        /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cmake-3.29.2-uy62fy4h36w2oksxxg3zcflj2qoex2id/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82202.dir/link.txt --verbose=1
+        /usr/bin/g++-12 -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -Wl,-rpath -Wl,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hwloc-2.9.1-yrldye43ik25keugb4lwimfrrjxqztyr/lib -L/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libevent-2.1.12-adcxyonxvh7634ml5fj3aqfyfcvewmrv/lib CMakeFiles/cmTC_82202.dir/test_mpi.cpp.o -o cmTC_82202  -Wl,-rpath,/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib/libmpi.so
+        gmake[1]: Leaving directory '/home/u07khl00/work/picInputs/HiPAC_two_stream_C_parallel_quiz/.build/CMakeFiles/CMakeScratch/TryCompile-OGRrXO'
+        
+      exitCode: 0
+...
