@@ -1,4 +1,4 @@
-# Install script for directory: /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/CMakeFiles/CheckCUDA
+# Install script for directory: /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/CMakeFiles/CheckCUDA
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/CMakeFiles/CheckCUDA/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/CMakeFiles/CheckCUDA/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

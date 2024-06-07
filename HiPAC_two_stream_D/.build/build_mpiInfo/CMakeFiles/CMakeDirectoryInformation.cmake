@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/u07khl00/src/picongpu/include/mpiInfo")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

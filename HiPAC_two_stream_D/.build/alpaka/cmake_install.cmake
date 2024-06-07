@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz")
+  set(CMAKE_INSTALL_PREFIX "/home/u07khl00/work/picInputs/HiPAC_two_stream_D")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,6 +44,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/alpaka/thirdParty/cmake_install.cmake")
+  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/alpaka/thirdParty/cmake_install.cmake")
 endif()
 

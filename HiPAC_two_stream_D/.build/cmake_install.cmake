@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz")
+  set(CMAKE_INSTALL_PREFIX "/home/u07khl00/work/picInputs/HiPAC_two_stream_D")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,22 +44,22 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/alpaka/cmake_install.cmake")
+  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/alpaka/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/build_cuda_memtest/cmake_install.cmake")
+  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/build_cuda_memtest/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/build_mpiInfo/cmake_install.cmake")
+  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/build_mpiInfo/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/build_nlohmann_json/cmake_install.cmake")
+  include("/home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/build_nlohmann_json/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -69,7 +69,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/picongpu"
          RPATH "\$ORIGIN:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/libpng-1.6.39-e6pqngzkonruxn3ugrp5j6lzvnfemtgo/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/zlib-ng-2.1.6-vvao6eyla5chixewmij23qi3yqcl23kh/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/freetype-2.13.2-nig34fzp75nx7i6xyvrmfm5k3ylp6kb3/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openpmd-api-0.15.2-jj42ubjlngo3limgo5crohaz5vhqtxrt/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/hdf5-1.14.3-vrkrarqzttdpqlwwdalgw6cfl5ormmlh/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/boost-1.85.0-xr2g2nyjhknljhirmqykihrezxvqnr3j/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/openmpi-4.1.6-7kiuncwtylgy5lamarjaadu5lxgwpk6i/lib:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cuda-12.4.1-4hvvlxl3swf655j75m7unxinpq6ynlz2/lib64:/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/fftw-3.3.10-euzu4h3zvfzsbooptr2vwcv3jphlyse5/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/picongpu")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/picongpu")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/picongpu" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/picongpu")
     file(RPATH_CHANGE
@@ -94,5 +94,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -57,10 +57,10 @@ RM = /home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/CMakeFiles/CheckCUDA
+CMAKE_SOURCE_DIR = /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/CMakeFiles/CheckCUDA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/CMakeFiles/CheckCUDA
+CMAKE_BINARY_DIR = /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/CMakeFiles/CheckCUDA
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/CMakeFiles/CheckCUDA/CMakeFiles /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/CMakeFiles/CheckCUDA//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/CMakeFiles/CheckCUDA/CMakeFiles /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/CMakeFiles/CheckCUDA//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/CMakeFiles/CheckCUDA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/CMakeFiles/CheckCUDA/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

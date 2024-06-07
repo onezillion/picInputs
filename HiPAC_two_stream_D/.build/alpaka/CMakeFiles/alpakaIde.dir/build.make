@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/u07khl00/src/picongpu/include/picongpu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build
+CMAKE_BINARY_DIR = /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build
 
 # Utility rule file for alpakaIde.
 
@@ -74,10 +74,10 @@ alpaka/CMakeFiles/alpakaIde.dir/build: alpakaIde
 .PHONY : alpaka/CMakeFiles/alpakaIde.dir/build
 
 alpaka/CMakeFiles/alpakaIde.dir/clean:
-	cd /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/alpaka && $(CMAKE_COMMAND) -P CMakeFiles/alpakaIde.dir/cmake_clean.cmake
+	cd /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/alpaka && $(CMAKE_COMMAND) -P CMakeFiles/alpakaIde.dir/cmake_clean.cmake
 .PHONY : alpaka/CMakeFiles/alpakaIde.dir/clean
 
 alpaka/CMakeFiles/alpakaIde.dir/depend:
-	cd /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/u07khl00/src/picongpu/include/picongpu /home/u07khl00/src/picongpu/thirdParty/alpaka /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/alpaka /home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz/.build/alpaka/CMakeFiles/alpakaIde.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/u07khl00/src/picongpu/include/picongpu /home/u07khl00/src/picongpu/thirdParty/alpaka /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/alpaka /home/u07khl00/work/picInputs/HiPAC_two_stream_D/.build/alpaka/CMakeFiles/alpakaIde.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : alpaka/CMakeFiles/alpakaIde.dir/depend
 
