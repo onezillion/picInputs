@@ -1,1 +1,1 @@
- -Wl,-rpath,::::::: "/usr/lib/x86_64-linux-gnu/libnvidia-ml.so" -lcudadevrt -lcudart_static -lrt -lpthread -ldl 
+ -Wl,-rpath,::::::: "/home/u07khl00/spack/opt/spack/linux-ubuntu22.04-skylake_avx512/gcc-12.3.0/cuda-12.4.1-4hvvlxl3swf655j75m7unxinpq6ynlz2/targets/x86_64-linux/lib/stubs/libnvidia-ml.so" -lcudadevrt -lcudart_static -lrt -lpthread -ldl 
