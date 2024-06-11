@@ -254,7 +254,7 @@ for mplot in mplot0:
 		# create video for phase space plots, for Cases A & B
 		data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/fig_output/")
 		converter = ImagetoAnime( data_folder , "jpg", "PhaseSpace" )
-		converter.generate_video(fps=36)
+		converter.generate_video(fps=90)
 
 exit()
 
