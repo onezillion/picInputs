@@ -22,14 +22,10 @@ warnings.filterwarnings("ignore", category=RuntimeWarning)
 class EnergyPlot:
     def __init__(self, data_folder ):
         self.data_folder = data_folder
-        
-    def load_energy_data(self, file_name):
-        return np.loadtxt(self.data_folder + file_name)[:, 0:2]
     
     def plot_energy(self):
         e_sum_ene = np.loadtxt(self.data_folder + "e_energy_all.dat")[:, 0:2]
-        #e_sum_ene = self.load_energy_data("e_energy_all.dat")
-        fields_sum_ene = self.load_energy_data("fields_energy.dat")[:len(e_sum_ene)]
+        fields_sum_ene = np.loadtxt(self.data_folder + "fields_energy.dat")[:len(e_sum_ene)]
         
         tot_sum_ene = e_sum_ene[:, 1] + fields_sum_ene[:, 1]
         tot_sum_ene_delta = abs(1 - tot_sum_ene / tot_sum_ene[1])
@@ -195,7 +191,8 @@ class ImagetoAnime:
 #mplot0=[0,7]
 
 simDir = "~/work/runs/HiPAC_two_stream_A_08/"
-mplot0=[0,1,2,5,6,9]
+mplot0=[0]
+#mplot0=[0,1,2,5,6,9]
 
 #simDir = "~/work/runs/HiPAC_two_stream_B_01"
 #mplot0=[0,1,3,5,6,9]
