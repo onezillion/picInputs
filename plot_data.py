@@ -195,8 +195,7 @@ class ImagetoAnime:
 #mplot0=[0,7]
 
 simDir = "~/work/runs/HiPAC_two_stream_A_08/"
-mplot0=[0,2]
-#mplot0=[0,1,2,5,6,9]
+mplot0=[0,1,2,5,6,9]
 
 #simDir = "~/work/runs/HiPAC_two_stream_B_01"
 #mplot0=[0,1,3,5,6,9]
