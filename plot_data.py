@@ -26,17 +26,15 @@ class EnergyPlot:
     def load_energy_data(self, file_name):
         return np.loadtxt(self.data_folder + file_name)[:, 0:2]
     
-    def calculate_total_energy(self, e_sum_ene, fields_sum_ene):
-        tot_sum_ene = e_sum_ene[:, 1] + fields_sum_ene[:, 1]
-        return abs(1 - tot_sum_ene / tot_sum_ene[1])
-    
     def plot_energy(self):
-        e_sum_ene = self.load_energy_data("e_energy_all.dat")
+        e_sum_ene = np.loadtxt(self.data_folder + "e_energy_all.dat")[:, 0:2]
+        #e_sum_ene = self.load_energy_data("e_energy_all.dat")
         fields_sum_ene = self.load_energy_data("fields_energy.dat")[:len(e_sum_ene)]
         
-        tot_sum_ene_delta = self.calculate_total_energy(e_sum_ene, fields_sum_ene)
+        tot_sum_ene = e_sum_ene[:, 1] + fields_sum_ene[:, 1]
+        tot_sum_ene_delta = abs(1 - tot_sum_ene / tot_sum_ene[1])
         
-        plt.figure()
+        plt.figure(figsize=(8, 6))
         plt.subplot(221)
         plt.yscale('log')
         plt.plot(e_sum_ene[:, 0], e_sum_ene[:, 1], label="Ek_e (joule)")
@@ -47,12 +45,20 @@ class EnergyPlot:
         plt.plot(fields_sum_ene[:, 0], fields_sum_ene[:, 1], label="E_w (joule)")
         plt.legend(loc='best')
 
+        file=open(self.data_folder + "output",'r')
+        comp_time=file.readlines()[-2:]
+        comp_time=''.join(comp_time)
+
         plt.subplot(212)
         plt.yscale('log')
         plt.plot(e_sum_ene[:, 0], tot_sum_ene_delta, label="$\Delta$E_tot_re, max={:.6e}".format(np.max(tot_sum_ene_delta)))
         plt.ylabel('normalized $\Delta$E_tot', fontsize=12,fontweight='bold')
         plt.xlabel('time steps', fontsize=12,fontweight='bold')
+        plt.title(comp_time,fontsize=10,fontstyle='italic')
         plt.legend(loc='lower left')
+        ax1=plt.gca()
+        pos1=ax1.get_position()
+        ax1.set_position([pos1.x0, pos1.y0-0.15, pos1.width, pos1.height])
 
         savefigname = self.data_folder + "/energy_time.jpg"
         print(savefigname)
@@ -95,7 +101,7 @@ class HDF5Plot:
 
         print('ex1 size = ' + str(ex1.shape))
         print('ex2 size = ' + str(ex2.shape))
-        plt.figure(figsize=(4, 3))
+        plt.figure(figsize=(8, 6))
         plt.subplot(121)
         plt.imshow(ex1.T, extent=[0, 1, 0, 1], interpolation='bilinear', aspect=2, origin='lower', cmap='jet')
         plt.ylabel('time', fontsize=12,fontweight='bold')
@@ -188,11 +194,12 @@ class ImagetoAnime:
 #simDir = "~/work/runs/HiPAC_two_stream_C_16/"
 #mplot0=[0,7]
 
-#simDir = "~/work/runs/HiPAC_two_stream_A_08/"
+simDir = "~/work/runs/HiPAC_two_stream_A_08/"
+mplot0=[0,2]
 #mplot0=[0,1,2,5,6,9]
 
-simDir = "~/work/runs/HiPAC_two_stream_B_01"
-mplot0=[0,1,3,5,6,9]
+#simDir = "~/work/runs/HiPAC_two_stream_B_01"
+#mplot0=[0,1,3,5,6,9]
 
 #simDir = "~/work/runs/HiPAC_two_stream_D_08/"
 #mplot0=[0,7,9]
@@ -212,13 +219,13 @@ for mplot in mplot0:
 		transpose1.transpose_images()
 		
 	elif mplot==2:
-		# plot dispersion diagrams, high temporal resolution, for Case A 
+		# plot dispersion diagrams and ex hist, high temporal resolution, for Case A 
 		data_folder = os.path.expanduser( simDir + "/simOutput/openPMD/")
 		hdf5_plot = HDF5Plot(data_folder)
 		hdf5_plot.plot_ex_fft( wmax=16 , kmax=0.15 , nt_init=500 )
 		
 	elif mplot==3:
-		# plot dispersion diagrams, low temporal resolution, for Case B
+		# plot dispersion diagrams and ex hist, low temporal resolution, for Case B
 		data_folder = os.path.expanduser( simDir + "/simOutput/openPMD/")
 		hdf5_plot = HDF5Plot(data_folder)
 		hdf5_plot.plot_ex_fft( wmax=4 , kmax=0.2 , nt_init=50 )
