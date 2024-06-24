@@ -10,7 +10,6 @@ import numpy as np
 import glob
 import cv2
 from PIL import Image, ImageSequence
-from pprint import pprint
 import warnings
 
 #from picongpu.extra.plugins.data import PhaseSpaceData
@@ -170,14 +169,24 @@ class ImagetoAnime:
             first_image.save(self.output_anime + ".gif", save_all=True, append_images=images[1:], duration=200, loop=0, optimize=True)
         print(self.output_anime + ".gif")
 
-    def generate_video(self,fps=5):
+    def generate_video(self,fps=10):
         print("Generating video...")
+        width=1080
         frame = cv2.imread(self.image_paths[0])
-        height, width, layers = frame.shape
-        video = cv2.VideoWriter(self.output_anime + ".avi", cv2.VideoWriter_fourcc(*'DIVX'), fps, (width, height), isColor=True)
+        if frame.shape[0] <width:
+            print('keep original resolution')
+            ar = 1
+        elif frame.shape[0] >width:
+            print('rescale to ' + str(width) + 'p')
+            ar = frame.shape[1] / frame.shape[0]
+        video = cv2.VideoWriter(self.output_anime + ".avi", cv2.VideoWriter_fourcc(*'XVID'), fps, (width, int(width / ar)), isColor=True)
 
         for image_path in self.image_paths:
-            video.write(cv2.imread(image_path))
+            sys.stdout.write('\r' + image_path)
+            sys.stdout.flush()
+            frame = cv2.imread(image_path)
+            resized_frame = cv2.resize(frame, (width, int(width / ar)))
+            video.write(resized_frame)
 
         video.release()
         print(self.output_anime + ".avi")
@@ -191,8 +200,7 @@ class ImagetoAnime:
 #mplot0=[0,7]
 
 simDir = "~/work/runs/HiPAC_two_stream_A_08/"
-mplot0=[0]
-#mplot0=[0,1,2,5,6,9]
+mplot0=[0,1,2,5,6,9]
 
 #simDir = "~/work/runs/HiPAC_two_stream_B_01"
 #mplot0=[0,1,3,5,6,9]
@@ -260,7 +268,7 @@ for mplot in mplot0:
 		# create video for phase space plots, for Cases A & B
 		data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/fig_output/")
 		converter = ImagetoAnime( data_folder , "jpg", "PhaseSpace" )
-		converter.generate_video(fps=6)
+		converter.generate_video(fps=10)
         # converter.generate_video(fps=90)
 
 exit()
