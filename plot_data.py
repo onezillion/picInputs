@@ -202,11 +202,14 @@ class ImagetoAnime:
 #simDir = "~/work/runs/HiPAC_two_stream_A_08/"
 #mplot0=[0,1,2,5,6,9]
 
+simDir = "~/work/runs/HiPAC_two_stream_A_08_II/"
+mplot0=[0,1,2,5,6,9]
+
 #simDir = "~/work/runs/HiPAC_two_stream_B_01"
 #mplot0=[0,1,3,5,6,9]
 
-simDir = "~/work/runs/HiPAC_two_stream_D_08/"
-mplot0=[9]
+#simDir = "~/work/runs/HiPAC_two_stream_D_08/"
+#mplot0=[0,9]
 
 
 for mplot in mplot0:
@@ -268,8 +271,8 @@ for mplot in mplot0:
 		# create video for phase space plots, for Cases A & B
 		data_folder = os.path.expanduser( simDir + "/simOutput/phaseSpace/fig_output/")
 		converter = ImagetoAnime( data_folder , "jpg", "PhaseSpace" )
-		#converter.generate_video(fps=10)
-		converter.generate_video(fps=90)
+		converter.generate_video(fps=10)
+		#converter.generate_video(fps=90)
 
 exit()
 

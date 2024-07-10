@@ -698,6 +698,10 @@ PIC_COPY_ON_INSTALL:STRING=include/picongpu;etc/picongpu;lib
 //search PATH to extension folder
 PIC_EXTENSION_PATH:PATH=/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_quiz
 
+//Set the maximum number of MPI ranks that create a file with trace
+// information.
+PIC_OPENPMD_TIMETRACE_NUMBER_OF_FILES:STRING=0
+
 //FFT library for shadowgraphy plugin
 PIC_USE_FFTW3:STRING=AUTO
 
@@ -825,6 +829,9 @@ alpaka_BINARY_DIR:STATIC=/home/u07khl00/work/picInputs/HiPAC_two_stream_A_std_qu
 // for backends requiring static allocation (includes CPU_B_OMP2_T_SEQ,
 // CPU_B_TBB_T_SEQ, CPU_B_SEQ_T_SEQ, SYCL)
 alpaka_BLOCK_SHARED_DYN_MEMBER_ALLOC_KIB:STRING=47
+
+//Build the benchmarks
+alpaka_BUILD_BENCHMARKS:BOOL=OFF
 
 //No help, variable specified on the command line.
 alpaka_CUDA_EXPT_EXTENDED_LAMBDA:UNINITIALIZED=ON
